@@ -160,10 +160,16 @@ nav a {
   width: 100%;
 }
 
+.expeience-img {
+  position: relative;
+}
+
 .experience-title {
   font-weight: 700;
   font-size: 2rem;
   border-left: 5px solid #FF900E;
+  padding-left: 13px;
+  margin-bottom: 0;
 }
 
 .experience-description {
@@ -180,9 +186,30 @@ nav a {
 .card-one {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.096);
   border-radius: 5px;
-  padding: 2px 20px;
-  margin-bottom: 10px;
+  padding: 20px 20px;
+  margin-bottom: 16px;
+}
 
+.experience-card,
+.experience1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.year {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.year-ex {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.yearexperience {
+  position: absolute;
+  left: -50px;
+  bottom: 0;
 }
 
 /* some facts start */
@@ -245,16 +272,13 @@ nav a {
   padding: 25px 0px;
 }
 
-.hide {
-  display: none;
-}
-
 /* media query */
 @media screen and (max-width:576px) {
 
   nav,
   ul,
-  .features {
+  .features,
+  .experience-container {
     flex-direction: column;
   }
 
@@ -291,11 +315,19 @@ nav a {
     margin: 0 auto;
     text-align: center;
   }
+
+  .yearexperience {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -50px;
+  }
 }
 
 /* medium device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .features {
+  .features,
+  .experience-container {
     flex-direction: column;
   }
 
@@ -315,10 +347,12 @@ nav a {
   .facts-aline {
     text-align: center;
   }
+
   .fact-description {
     margin: 0 auto;
     text-align: center;
   }
+
   .spons-icon {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -330,5 +364,11 @@ nav a {
 
   .figma {
     grid-column: span 2;
+  }
+  .yearexperience {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -50px;
   }
 }
